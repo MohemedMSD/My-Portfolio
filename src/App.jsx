@@ -1,5 +1,6 @@
 import axios from "axios";
 import {React, useEffect, useState} from "react";
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 import {
   About,
   Comptes,
@@ -9,6 +10,7 @@ import {
   Navbar,
   Projects,
 } from "./constants/pages";
+import { MainApp } from "./MainApp";
 
 function App() {
 
@@ -38,20 +40,12 @@ function App() {
   }, []);
 
   if (!loaded) return <Loading active={loaded} />;
-
-  
   return (
-    <>
-      <Navbar />
-      <Comptes SocialMedia={SocialMedia} />
-      <div className="scroll-bar">
-        
-      <Home />
-      <About loaded={loaded} />
-      <Projects />
-      <Contact SocialMedia={SocialMedia} />
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/My-Portfolio/" exact element={<MainApp loaded={loaded} SocialMedia={SocialMedia}/>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
