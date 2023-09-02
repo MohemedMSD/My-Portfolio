@@ -1,0 +1,160 @@
+@use '../../constants/variables';
+@use '../../constants/mixin';
+#Home {
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    @include mixin.for-laptop{
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 30%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: variables.$secondary-color;
+            z-index: -2;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            width: 33%;
+            height: 117%;
+            left: 22%;
+            top: 0;
+            background-color: variables.$primary_color;
+            transform: rotate(13deg);
+            z-index: -2;
+        }
+    }
+    
+    .main{
+        height: 103vh;
+
+        @include mixin.for-phone{
+            gap: 30px;
+        }
+
+        @include mixin.for-tablete{
+            height : 100vh;
+        }
+
+        .div_image {
+            .image{
+                height: 570px;
+                max-height: 802px;
+                background-color: black;
+                @include mixin.for-phone{
+                    height: 150px;
+                    width: 150px;
+                    border-radius: 100%;
+                }
+                @include mixin.for-tablete{
+                    height: 150px;
+                    width: 150px;
+                    border-radius: 100%;
+                }
+                @include mixin.for-laptop{
+                    height : 82%;
+                    width: 570px;
+                    border-radius: 49px;
+                }
+            }
+        }
+
+        .div_info{
+
+            h1{
+                font-family: variables.$font-header;
+                font-size: 60px;
+                color: variables.$font_color;
+                margin: 0;
+                @include mixin.for-fold{
+                    font-size: 26px;
+                    text-align: center;
+                }
+                @include mixin.for-phone{
+                    font-size: 27px;
+                    text-align: center;
+                }
+                @include mixin.for-tablete{
+                    font-size: 27px;
+                    text-align: center;
+                    margin-top: 30px;
+                }
+                @include mixin.for-laptop{
+                    font-size: 37px;
+                    text-align: start;
+                    margin-top: 0px;
+                }
+                @include mixin.for-laptop-lg{
+                    font-size: 58px;
+                }
+                span{
+                    color: variables.$secondary_color;
+                }
+            }
+
+            h2{
+                color: variables.$font_color;
+                font-size: 40px;
+
+                @include mixin.for-fold{
+                    font-size: 17px;
+                    text-align: center;
+                }
+
+                @include mixin.for-phone{
+                    font-size: 21px;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+
+                @include mixin.for-tablete{
+                    font-size: 21px;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+
+                @include mixin.for-laptop{
+                    font-size: 27px;
+                    text-align: start;
+                    margin: 0 0 8px;
+                }
+
+                span {
+                    color: variables.$secondary_color;
+                }
+            }
+
+            p{
+                color: variables.$font_color;
+                line-height: 1.75;
+
+                @include mixin.for-phone{
+                    margin-bottom: 20px;
+                    text-align: center;
+                    font-size: 13px;
+                }
+
+                @include mixin.for-tablete{
+                    font-size: 14px;
+                    text-align: center;
+                }
+
+                @include mixin.for-laptop{
+                    font-size: 15px;
+                    text-align: start;
+                    margin-bottom: 21px;
+                }
+            }
+
+            .btns{
+                text-decoration: none;
+            }
+            
+        }
+    }
+}

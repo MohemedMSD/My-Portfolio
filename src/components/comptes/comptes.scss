@@ -1,0 +1,25 @@
+@use '../../constants/variables';
+@use '../../constants/mixin';
+.side_comptes{
+    left: 2%;
+    position: fixed;
+    bottom: 40px;
+    z-index: 10;
+    gap: 18px 0;
+    .compte{
+        width: 50px;
+        height: 50px;
+        background-color: variables.$bg_icon;
+        border-radius: 50px;
+        transition: all .3s;
+        &:hover{
+            background: variables.$secondary-color;
+        }
+        a {
+            i{
+                font-size: 20px;
+                color: variables.$font_color;
+            }
+        }
+    }
+}

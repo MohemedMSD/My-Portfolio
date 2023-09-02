@@ -1,0 +1,168 @@
+@use '../../constants/variables.scss';
+@use '../../constants/mixin.scss';
+
+#Contact {
+    z-index: 1;
+    position: relative;
+
+    h1{
+        font-family: variables.$font-header, 'sans-serif';
+        color: variables.$secondary-color;
+        position: relative;
+
+        &::before{
+            content: "Contact";
+            position: absolute;
+            font-size: 100px;
+            top: 50%;
+            letter-spacing: 2px;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            color: variables.$font_color;
+            opacity: .08;
+            z-index: -1;
+        }
+
+        @include mixin.for-phone{
+            top: 33px;
+            font-size: 30px;
+            margin: 20px 0 35px;
+
+            &::before{
+                font-size: 50px;
+                width: 100%;
+            }
+
+        }
+
+        @include mixin.for-tablete{
+            font-size: 43px;
+
+            &::before{
+                font-size: 75px;
+            }
+
+        }
+
+        @include mixin.for-laptop{
+            font-size: 53px;
+
+            &::before{
+                font-size: 90px;
+            }
+
+        }
+
+        @include mixin.for-laptop-lg{
+            font-size: 58px;
+            margin: 20px 0 8px;
+
+            &::before{
+                font-size: 100px;
+            }
+
+        }
+
+    }
+
+    .content{
+
+        .information{
+
+            .info-box{
+
+                i{
+                    color: variables.$secondary-color;
+                }
+
+                .info{
+
+                    .header{
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                    }
+
+                    .text{
+                        font-weight: 700;
+                    }
+
+                }
+
+            }
+
+            .comptes{
+                gap: 0 14px;
+
+                .compte{
+
+                    a {
+
+                        i {
+                            color: variables.$font_color;
+                            font-size: 30px;
+
+                            &:hover{
+                                opacity: 0.8;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .form-contact{
+
+            form {
+                gap: 20px 0;
+
+                .mb-4{
+                    margin-bottom: 1.32rem !important;
+                    @include mixin.for-laptop{
+                        margin-bottom: 0 !important;
+                    }
+                }
+
+                div{
+
+                    input, textarea{
+                        border-radius: 20px;
+                        background: variables.$bg_icon;
+                        border: none;
+                        padding: 12px 24px;
+                        color: variables.$font_color;
+
+                        &::placeholder{
+                            color : variables.$font_color;
+                            text-transform: uppercase;
+                            opacity: .5;
+                        }
+
+                        &:focus{
+                            outline: 1px solid variables.$secondary-color;
+                        }
+
+                    } 
+
+                    .error {
+                        border: 1px solid red;
+                    }
+
+                }
+
+                .btn-about::after{
+                    content: "\f1d8";
+                }
+
+            }
+
+        }
+
+    }
+
+}

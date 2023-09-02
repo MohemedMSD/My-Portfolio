@@ -1,0 +1,33 @@
+@mixin for-fold {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+@mixin for-phone {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin for-tablete {
+    @media (min-width: 481px) {
+        @content;
+    }
+}
+
+@mixin for-laptop {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-laptop-lg {
+    @media (min-width: 1025px) {
+        @content;
+    }
+}
+@mixin for-laptop-xlg {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}

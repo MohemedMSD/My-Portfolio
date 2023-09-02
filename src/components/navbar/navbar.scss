@@ -1,0 +1,230 @@
+@use '../../constants/variables';
+@use '../../constants/mixin';
+    .nav-links{
+        position: fixed;
+        list-style: none ;
+        margin: 0;
+        display: flex;
+        background-color: black;
+        z-index: 10;
+        @include mixin.for-phone{
+            bottom: 0;
+            flex-direction: row;
+            right: 0;
+            width: 100%;
+            height: 55px;
+            transform: translateY(0%);
+            justify-content:space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        @include mixin.for-tablete{
+            bottom: 0;
+            flex-direction: row;
+            right: 0;
+            width: 100%;
+            height: 55px;
+            transform: translateY(0%);
+            justify-content:space-around;
+            align-items: center;
+            padding: 0 20px;
+        }
+        @include mixin.for-laptop{
+            flex-direction: column;
+            gap: 25px;
+            bottom: 50%;
+            right: 2%;
+            height: 55px;
+            width: 5%;
+            background-color: transparent;
+            transform: translateY(50%);
+            justify-content:center;
+            align-items: end;
+            padding: 0;
+        }
+        .bg-moved{
+            background: variables.$secondary-color;
+            width: 50px;
+            position: absolute;
+            // top: calc(-178% + 360%);
+            right: 3px;
+            border-radius: 30px;
+            height: 50px;
+            transition: top .3s;
+        }
+        .nav-link{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            @include mixin.for-phone{
+                width: 50px;
+            }
+            @include mixin.for-tablete{
+                width: 50px;
+            }
+            @include mixin.for-laptop{
+                width: 10px;
+            }
+            &::after{
+                content: "";
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                z-index: -1;
+                background: variables.$bg_icon;
+                border-radius: 50%;
+                width: 50px;
+                right: 3px;
+                transition: all .2s;
+                height: 50px;
+                font-size: 18px;
+                color: variables.$font_color;
+                @include mixin.for-phone{
+                    width: 45px;
+                    height: 45px;
+                    font-size: 16px;
+                }
+            }
+            
+            &.active{
+                &::after{
+                    background: variables.$secondary-color;
+                }
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                z-index: -1;
+                background: variables.$secondary_color;
+                border-radius: 20px 0 0 20px;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.3s ease;
+                width: 105px;
+                height: 100%;
+                right: 26px;
+            }
+
+            &:nth-child(1){
+                &::after{
+                    content: "\f015";
+                }
+                & span{
+                    width: 75px;
+                }
+            }
+
+            &:nth-child(2){
+                &::after{
+                    content: "\f007";
+                }
+                & span{
+                    width: 75px;
+                }
+            }
+
+            &:nth-child(3){
+                &::after{
+                    content: "\f0b1";
+                }
+                &::before{
+                    width: 116px;
+                }
+            }
+
+            &:nth-child(4){
+                &::after{
+                    content: "\f27a";
+                }
+                &::before{
+                    width: 116px;
+                }
+            }
+
+            &:nth-child(5){
+                &::after{
+                    content: "\f27a";
+                }
+                &::before{
+                    width: 116px;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                display: flex;
+                color: variables.$font_color;
+                transform: scaleX(0);
+                @include mixin.for-phone{
+                    width: 45px;
+                    height: 45px;
+                }
+                @include mixin.for-tablete{
+                    width: 45px;
+                    height: 45px;
+                }
+                @include mixin.for-laptop{
+                    width: fit-content;
+                    height: 25px;
+                }
+            }
+
+            span{
+                opacity: 0;
+                margin-left: -19px;
+                font-weight: 700;
+                width: 90px;
+                @include mixin.for-phone{
+                    display: none;
+                }
+                @include mixin.for-tablete{
+                    display: none;
+                }
+                @include mixin.for-laptop{
+                    display: flex;
+                }
+            }
+
+            &:hover{
+                @include mixin.for-laptop{
+                    width: fit-content;
+                }
+                a{
+                    transform: scaleX(1);
+                    span{
+                        opacity: 1;
+                        font-size: 16px;
+                        margin-left: 0;
+                        transition: opacity .5s .1s ;
+                    }
+                }
+                &::before{
+                    transform: scaleX(1);
+                    @include mixin.for-phone{
+                        display: none;
+                    }
+                    @include mixin.for-tablete{
+                        display: none;
+                    }
+                    @include mixin.for-laptop{
+                        display: flex;
+                    }
+                }
+                &::after{
+                    background: variables.$secondary_color;
+                }
+            }
+        }
+
+        .go-to-top{
+            position: fixed;
+            bottom: -500%;
+            right: 2%;
+        }
+    }

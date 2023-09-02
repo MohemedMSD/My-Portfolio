@@ -1,0 +1,65 @@
+@use '../../constants/variables';
+@use '../../constants/mixin';
+.btn-about{
+    border-radius: 28px 0 0 28px;
+    font-weight: 600;
+    position: relative;
+    border: 1px solid variables.$secondary_color;
+    background-color: transparent;
+    color: variables.$secondary_color;
+    transition: color .4s;
+    &::after{
+        content: "\f061";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: variables.$primary_color;
+        font-weight: 700;
+        font-family: "Font Awesome 6 Free";
+        position: absolute;
+        background: variables.$secondary_color;
+        width: 48px;
+        height: 100%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        right: 0;
+        border-radius: 100%;
+        @include mixin.for-phone{
+            width: 56px;
+            border: 29px solid variables.$secondary_color;
+        }
+        @include mixin.for-tablete{
+            width: 40px;
+            border: 21px solid variables.$secondary_color;
+        }
+        @include mixin.for-laptop{
+            width: 48px;
+            border: 24px solid variables.$secondary_color;
+        }
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        background: variables.$secondary_color;
+        width: 100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .4s;
+        height: 100%;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        border-radius: 28px 0 0 28px;
+    }
+    &:hover{
+        color: variables.$primary_color;
+        &::before{
+            transform: scaleX(1);
+        }
+        
+    }
+    @include mixin.for-laptop{
+        padding: 0.5rem 1rem;
+        font-size: 1.25rem;
+    }
+}

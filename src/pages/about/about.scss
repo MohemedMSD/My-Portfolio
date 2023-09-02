@@ -1,0 +1,281 @@
+@use '../../constants/variables';
+@use '../../constants/mixin';
+#About {
+    z-index: 1;
+    position: relative;
+    @include mixin.for-phone{
+        height: 100%;
+    }
+    
+    h1{
+        margin-top: 20px;
+        font-family: variables.$font-header, 'sans-serif';
+        color: variables.$secondary-color;
+        position: relative;
+
+        &::before{
+            content: "About ME";
+            position: absolute;
+            font-size: 100px;
+            top: 50%;
+            letter-spacing: 2px;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            color: variables.$font_color;
+            opacity: .08;
+            z-index: -1;
+        }
+
+        @include mixin.for-phone{
+            top: 33px;
+            font-size: 30px;
+            margin: 20px 0 90px;
+
+            &::before{
+                font-size: 50px;
+                width: 100%;
+            }
+
+        }
+
+        @include mixin.for-tablete{
+            font-size: 43px;
+
+            &::before{
+                font-size: 75px;
+                width: 100%;
+            }
+
+        }
+        @include mixin.for-laptop{
+            font-size: 53px;
+
+            &::before{
+                font-size: 90px;
+            }
+
+        }
+
+        @include mixin.for-laptop-lg{
+            font-size: 58px;
+            margin: 20px 0 80px;
+
+            &::before{
+                font-size: 100px;
+            }
+
+        }
+    }
+
+    .content{
+
+        .info-per{
+
+            h2{
+                margin-bottom: 34px;
+                text-transform: uppercase;
+            }
+
+            label{
+                color: variables.$font_color;
+                text-transform: capitalize;
+            }
+
+            p{
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+
+            .info-per-content{
+                gap: 30px 0;
+
+                .btn-about::after{
+                    content: "\f019";
+                }
+
+            }
+
+            @include mixin.for-phone{
+                margin-bottom: 156px;
+                position: relative;
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 50%;
+                    height: 1px;
+                    background-color: #525252;
+                    bottom: -88px;
+                    right: 50%;
+                    transform: translateX(50%);
+                }
+
+            }
+
+            @include mixin.for-tablete{
+                margin-bottom: 156px;
+                position: relative;
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 50%;
+                    height: 1px;
+                    background-color: #525252;
+                    bottom: -88px;
+                    right: 50%;
+                    transform: translateX(50%);
+                }
+
+            }
+
+            @include mixin.for-laptop{
+                margin-bottom: 0;
+
+                &::after{
+                    width: 0;
+                }
+
+            }
+        }
+
+        .skills{
+
+            h2{
+                text-transform: uppercase;
+            }
+
+            .skills-content{
+                gap: 15px 40px;
+
+                @include mixin.for-fold{
+                    gap: 10px 20px;
+                    margin: 50px 0 30px 0;
+                }
+
+                @include mixin.for-phone{
+                    gap: 10px 30px;
+                    margin: 50px 0 30px 0;
+                }
+
+                @include mixin.for-tablete{
+                    gap: 10px 25px;
+                }
+
+                @include mixin.for-laptop-lg{
+                    gap: 15px 20px;
+                }
+
+                @include mixin.for-laptop-xlg{
+                    gap: 15px 50px;
+                }
+
+                .skill{
+                    position: relative;
+
+                    @include mixin.for-fold{
+                        width: 55px;
+                        height: 55px;
+                    }
+
+                    @include mixin.for-phone{
+                        width: 60px;
+                        height: 60px;
+                    }
+                    @include mixin.for-tablete{
+                        width: 65px;
+                        height: 65px;
+                    }
+
+                    @include mixin.for-laptop{
+                        width: 80px;
+                        height: 80px;
+                    }
+
+                    @include mixin.for-laptop-lg{
+                        width: 90px;
+                        height: 90px;
+                    }
+
+                    .img-skill{
+                        height: 100%;
+                        width: 100%;
+                        transition: transform .3s;
+                    }
+
+                    &:hover .img-skill{
+                        transform: scale(0.8);
+                    }
+
+                }
+
+            }
+
+        }
+        hr{
+            width: 50%;
+            margin-top: 58px;
+        }
+
+        .experiences{
+
+            h2{
+                text-transform: uppercase;
+                margin: 55px 0;
+            }
+
+            .experiences-content{
+
+                .experience{
+
+                    .div-icon{
+                        position: relative;
+
+                        &::after{
+                            content: "\f0b1";
+                            font-family: "Font Awesome 6 Free";
+                            font-weight: 900;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: absolute;
+                            border-radius: 100%;
+                            background-color: variables.$secondary-color;
+                            width: 35px;
+                            height: 35px;
+                            top: 4px;
+                            right: 50%;
+                            transform: translateX(46%);
+                        }
+                        
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            height: 77%;
+                            width: 2px;
+                            z-index: -1;
+                            top: 4px;
+                            right: 50%;
+                            background: #444;
+                        }
+
+                    }
+
+                    label{
+                        background-color: #5858587f;
+                    }
+
+                    h4{
+                        text-transform: uppercase;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+    
+}

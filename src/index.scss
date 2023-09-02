@@ -1,0 +1,28 @@
+@use './pages/home/home.scss';
+@use './constants/variables';
+*{ 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: variables.$font-text, 'Gill Sans', 'Gill Sans MT', sans-serif !important;
+    font-size: 18px;
+    scroll-behavior: smooth;
+    color: variables.$font_color !important;
+    position: relative;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    #root{
+        position: relative;
+        background-color: variables.$primary_color;
+    }
+}
+;
