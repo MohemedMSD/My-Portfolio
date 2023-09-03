@@ -63,15 +63,15 @@
         }
     ],
     "Skills" : [
-        { "name": "HTML", "icon": "src/assets/html.png" },
-        { "name": "css", "icon": "src/assets/css.png" },
-        { "name": "javascript", "icon": "src/assets/javascript.png" },
-        { "name": "node", "icon": "src/assets/node.png" },
-        { "name": "react", "icon": "src/assets/react.png" },
-        { "name": "redux", "icon": "src/assets/redux.png" },
-        { "name": "laravel", "icon": "src/assets/laravel.png" },
-        { "name": "sass", "icon": "src/assets/sass.png" },
-        { "name": "api", "icon": "src/assets/api.png" }
+        { "name": "HTML", "icon": "https://i.ibb.co/4j9xZKF/html.png" },
+        { "name": "css", "icon": "https://i.ibb.co/37xdh8s/css.png" },
+        { "name": "javascript", "icon": "https://i.ibb.co/Tw1MKkW/javascript.png" },
+        { "name": "node", "icon": "https://i.ibb.co/jGQLNGQ/node.png" },
+        { "name": "react", "icon": "https://i.ibb.co/85zxJb8/react.png" },
+        { "name": "redux", "icon": "https://i.ibb.co/RbgN7fP/redux.png" },
+        { "name": "laravel", "icon": "https://i.ibb.co/P9VFZvz/laravel.png" },
+        { "name": "sass", "icon": "https://i.ibb.co/7C6xdG5/sass.png" },
+        { "name": "api", "icon": "https://i.ibb.co/84gKJsH/api.png" }
     ],
     "projects" : [
         {
