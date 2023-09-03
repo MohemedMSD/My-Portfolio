@@ -9,9 +9,11 @@
         font-family: variables.$font-header, 'sans-serif';
         color: variables.$secondary-color;
         position: relative;
-
+        text-transform: uppercase;
         &::before{
             content: "Contact";
+            font-family: variables.$font-header, 'sans-serif';
+            text-transform: uppercase;
             position: absolute;
             font-size: 100px;
             top: 50%;
