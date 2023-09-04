@@ -12,52 +12,12 @@
     ],
     "Experiences" : [
         {
-            "anne": "2020",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
-        },
-        {
             "anne": "2021-2023",
             "etape": "DIPLOM TECHNICIEN SPECIALISE Développement Informatique FULL STACK",
             "lieu": "Ouazzane MAROC"
         },
         {
             "anne": "2022",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
-        },
-        {
-            "anne": "2022",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
-        },
-        {
-            "anne": "2022",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
-        },
-        {
-            "anne": "2022",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
-        },
-        {
-            "anne": "2024",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
-        },
-        {
-            "anne": "2024",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
-        },
-        {
-            "anne": "2024",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
-        },
-        {
-            "anne": "2024",
             "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
             "lieu": "Chefechaouen MAROC"
         }
@@ -71,7 +31,10 @@
         { "name": "redux", "icon": "https://i.ibb.co/RbgN7fP/redux.png" },
         { "name": "laravel", "icon": "https://i.ibb.co/P9VFZvz/laravel.png" },
         { "name": "sass", "icon": "https://i.ibb.co/7C6xdG5/sass.png" },
-        { "name": "api", "icon": "https://i.ibb.co/84gKJsH/api.png" }
+        { "name": "api", "icon": "https://i.ibb.co/84gKJsH/api.png" },
+	    { "name": "Mongodb", "icon": "https://i.ibb.co/99NW7pg/mo429m6b7-mongodb-logo-mongodb-original-wordmark-logo-free-icon-of-devicon.png" },
+        { "name": "Bootsrap", "icon": "https://i.ibb.co/jZdtcHF/bootstrap-logo-png-bootstrap-1024.png" },
+        { "name": "Mysql", "icon": "https://i.ibb.co/kHqvyWH/My-SQL-Logo-500x313.png" }
     ],
     "projects" : [
         {
