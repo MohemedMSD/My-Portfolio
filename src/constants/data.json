@@ -12,11 +12,6 @@
     ],
     "Experiences" : [
         {
-            "anne": "2020",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
-        },
-        {
             "anne": "2021-2023",
             "etape": "DIPLOM TECHNICIEN SPECIALISE Développement Informatique FULL STACK",
             "lieu": "Ouazzane MAROC"
@@ -25,53 +20,21 @@
             "anne": "2022",
             "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
             "lieu": "Chefechaouen MAROC"
-        },
-        {
-            "anne": "2022",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
-        },
-        {
-            "anne": "2022",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
-        },
-        {
-            "anne": "2022",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
-        },
-        {
-            "anne": "2024",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
-        },
-        {
-            "anne": "2024",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
-        },
-        {
-            "anne": "2024",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
-        },
-        {
-            "anne": "2024",
-            "etape": "BACCALAURÉAT SÉRIE SCIENCES PHISIQUE",
-            "lieu": "Chefechaouen MAROC"
         }
     ],
     "Skills" : [
-        { "name": "HTML", "icon": "src/assets/html.png" },
-        { "name": "css", "icon": "src/assets/css.png" },
-        { "name": "javascript", "icon": "src/assets/javascript.png" },
-        { "name": "node", "icon": "src/assets/node.png" },
-        { "name": "react", "icon": "src/assets/react.png" },
-        { "name": "redux", "icon": "src/assets/redux.png" },
-        { "name": "laravel", "icon": "src/assets/laravel.png" },
-        { "name": "sass", "icon": "src/assets/sass.png" },
-        { "name": "api", "icon": "src/assets/api.png" }
+        { "name": "HTML", "icon": "/src/assets/html.png" },
+        { "name": "css", "icon": "/src/assets/css.png" },
+        { "name": "javascript", "icon": "/src/assets/javascript.png" },
+        { "name": "node", "icon": "/src/assets/node.png" },
+        { "name": "react", "icon": "/src/assets/react.png" },
+        { "name": "redux", "icon": "/src/assets/redux.png" },
+        { "name": "laravel", "icon": "/src/assets/laravel.png" },
+        { "name": "sass", "icon": "/src/assets/sass.png" },
+        { "name": "api", "icon": "/src/assets/api.png" },
+        { "name": "Mysql", "icon": "/src/assets/MySQL-Logo-500x313.png" },
+        { "name": "Bootstrap", "icon": "/src/assets/bootstrap-logo-png-bootstrap-1024.png" },
+        { "name": "MongoDB", "icon": "/src/assets/mo429m6b7-mongodb-logo-mongodb-original-wordmark-logo-free-icon-of-devicon.png" }
     ],
     "projects" : [
         {

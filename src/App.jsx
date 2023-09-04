@@ -1,6 +1,6 @@
 import axios from "axios";
 import {React, useEffect, useState} from "react";
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import fetchData from "./constants/fetchData";
 import {
   About,
   Comptes,
@@ -10,7 +10,6 @@ import {
   Navbar,
   Projects,
 } from "./constants/pages";
-import { MainApp } from "./MainApp";
 
 function App() {
 
@@ -18,14 +17,7 @@ function App() {
   const [SocialMedia, setSocialMedia] = useState([]);
 
   useEffect(() => {
-    async function fetch(){
-      await axios.get('/src/constants/data.json')
-      .then((res)=> {
-        setSocialMedia(res.data.SocialMedia)
-      })
-    }
-
-    fetch()
+    fetchData().then((res)=> setSocialMedia(res.data.SocialMedia))
 
     setTimeout(() => {
       window.addEventListener("load", setloaded(true));
@@ -41,11 +33,16 @@ function App() {
 
   if (!loaded) return <Loading active={loaded} />;
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/My-Portfolio/" exact element={<MainApp loaded={loaded} SocialMedia={SocialMedia}/>}></Route>
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <Navbar />
+      <Comptes SocialMedia={SocialMedia} />
+      <div className="scroll-bar">
+        <Home />
+        <About loaded={loaded} />
+        <Projects />
+        <Contact SocialMedia={SocialMedia} />
+      </div>
+    </div>
   );
 }
 

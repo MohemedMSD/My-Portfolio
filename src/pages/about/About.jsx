@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./about.scss";
 import {Button} from '../../constants/pages'
-import axios from "axios";
+import fetchData from "../../constants/fetchData";
 export const About = () => {
 
   const [InformationPersonnal, setInformationPersonnal] = useState([])
@@ -11,25 +11,25 @@ export const About = () => {
   const [Skills, setSkills] = useState([])
 
   useEffect(() => {
-    async function fetch(){
-      await axios.get('/src/constants/data.json')
-      .then((res)=> {
-        setInformationPersonnal(res.data.InformationPersonnal)
-        setExperiences(res.data.Experiences)
-        setSkills(res.data.Skills)
-      })
-    }
-
-    fetch()
+    fetchData().then((res)=> {
+      setInformationPersonnal(res.data.InformationPersonnal)
+      setExperiences(res.data.Experiences)
+      setSkills(res.data.Skills)
+    })
   }, [])
-
+  
   // for management the box for experience
   var half = 0
   if (Experiences?.length > 3) {
-    half = Math.floor(Experiences.length / 2) + 1
+    half = Experiences.length / 2 ;
+    if(!Number.isInteger(half)){
+      half = Math.floor(Experiences.length / 2) + 1
+    }
   }
 
-
+  const hundelClick = () =>{
+    alert('CV is Not ready')
+  }
   return (
     <section id="About" className="py-5">
       <div className="container container-sm container-lg container-xl container-xxl">
@@ -41,8 +41,8 @@ export const About = () => {
 
               <div className="info-per-content d-flex flex-wrap">
               {
-                InformationPersonnal?.map((item)=>(
-                  <div className="col-12 col-md-12 col-lg-6">
+                InformationPersonnal?.map((item, index)=>(
+                  <div key={index} className="col-12 col-md-12 col-lg-6">
                     <div className="d-flex px-2">
                       <label>{item.key}:</label>
                       <p className="ms-3">{item.value}</p>
@@ -51,7 +51,7 @@ export const About = () => {
                 ))
               }
               <div className="col-12 col-md-12 col-lg-8 col-xl-7 mt-0 mt-lg-4">
-                <Button children={"Download CV"}/>
+                <Button hundelClick={hundelClick} children={"Download CV"}/>
               </div>
               </div>
 
@@ -62,8 +62,8 @@ export const About = () => {
 
               <div className="skills-content d-flex flex-wrap justify-content-center justify-content-md-start">
               {
-                Skills?.map((item)=>(
-                  <div className="skill d-flex align-items-center justify-content-center">
+                Skills?.map((item, index)=>(
+                  <div key={index} className="skill d-flex align-items-center justify-content-center">
                     <img src={item.icon} className="img-skill" alt="" />
                   </div>
                 ))
@@ -87,7 +87,7 @@ export const About = () => {
                       if (half > 0) {
 
                         if (index <= half - 1) {
-                          return <div className="row experience mx-lg-auto">
+                          return <div key={index} className="row experience mx-lg-auto">
                             <div className="div-icon col-1">
                               <div className="icon mx-auto">
 
@@ -103,7 +103,7 @@ export const About = () => {
 
                       }else{
 
-                        return <div className="row experience">
+                        return <div key={index} className="row experience">
                         <div className="div-icon col-1">
                           <div className="icon mx-auto">
 
@@ -126,7 +126,7 @@ export const About = () => {
                   {
                     Experiences?.map((item, index)=>{
                       if (half > 0 && index > half - 1) {
-                        return <div className="row experience">
+                        return <div key={index} className="row experience">
                         <div className="div-icon col-1">
                           <div className="icon mx-auto">
 

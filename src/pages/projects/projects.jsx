@@ -1,22 +1,13 @@
-import axios from 'axios'
 import {React, useEffect, useState} from 'react'
-import { Project } from '../../assets/projects'
+import fetchData from '../../constants/fetchData'
 import './projects.scss'
 export const Projects = () => {
 
   const [projects, setprojects] = useState([])
 
   useEffect(() => {
-    async function fetch(){
-      await axios.get('/src/constants/data.json')
-      .then((res)=> {
-        setprojects(res.data.projects)
-      })
-    }
-
-    fetch()
+    fetchData().then((res)=> setprojects(res.data.projects))
   }, [])
-
   return (
     <section id="Projects" style={{height : projects?.length <= 4 ? "100vh" : "100%"}} className='py-5'>
       <div className='container container-sm container-lg container-xl container-xxl'>
@@ -24,9 +15,9 @@ export const Projects = () => {
           <h1 className='col-12 text-center'>My Projects</h1>
           <div className='projects row col-12 d-flex flex-wrap justify-content-center justify-content-md-start'>
             {
-              projects?.map((item)=>(
+              projects?.map((item, index)=>(
 
-                <div className='col-10  col-md-6 col-lg-4 col-xl-3 main-project'>
+                <div key={index} className='col-10  col-md-6 col-lg-4 col-xl-3 main-project'>
 
                   <div className='project shadow p-3'>
 
@@ -37,7 +28,7 @@ export const Projects = () => {
                           <i className='fa-brands fa-github'></i>
                         </a>
                         <a target="_blank" href={item.links.livePreview}>
-                        <i class="fa-solid fa-eye"></i>
+                        <i className="fa-solid fa-eye"></i>
                         </a>
                       </div>
                     </div>

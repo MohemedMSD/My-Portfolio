@@ -4,7 +4,7 @@
     z-index: 1;
     position: relative;
     overflow: hidden;
-    @include mixin.for-laptop{
+    @include mixin.for-laptop-lg{
 
         &::before{
             content: "";
@@ -52,11 +52,11 @@
                     border-radius: 100%;
                 }
                 @include mixin.for-tablete{
-                    height: 150px;
-                    width: 150px;
+                    height: 220px;
+                    width: 220px;
                     border-radius: 100%;
                 }
-                @include mixin.for-laptop{
+                @include mixin.for-laptop-lg{
                     height : 82%;
                     width: 570px;
                     border-radius: 49px;
@@ -86,11 +86,11 @@
                 }
                 @include mixin.for-laptop{
                     font-size: 37px;
-                    text-align: start;
-                    margin-top: 0px;
                 }
                 @include mixin.for-laptop-lg{
-                    font-size: 58px;
+                    font-size: 50px;
+                    text-align: start;
+                    margin-top: 0px;
                 }
                 span{
                     color: variables.$secondary_color;
@@ -118,7 +118,7 @@
                     margin: 10px 0;
                 }
 
-                @include mixin.for-laptop{
+                @include mixin.for-laptop-lg{
                     font-size: 27px;
                     text-align: start;
                     margin: 0 0 8px;
@@ -145,6 +145,10 @@
                 }
 
                 @include mixin.for-laptop{
+                    font-size: 15px;
+                }
+
+                @include mixin.for-laptop-lg{
                     font-size: 15px;
                     text-align: start;
                     margin-bottom: 21px;

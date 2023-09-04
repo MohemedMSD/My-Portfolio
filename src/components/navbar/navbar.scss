@@ -29,7 +29,7 @@
             align-items: center;
             padding: 0 20px;
         }
-        @include mixin.for-laptop{
+        @include mixin.for-laptop-lg{
             flex-direction: column;
             gap: 25px;
             bottom: 50%;
@@ -64,7 +64,7 @@
             @include mixin.for-tablete{
                 width: 50px;
             }
-            @include mixin.for-laptop{
+            @include mixin.for-laptop-lg{
                 width: 10px;
             }
             &::after{
@@ -149,7 +149,7 @@
 
             &:nth-child(5){
                 &::after{
-                    content: "\f27a";
+                    content: "\f30c";
                 }
                 &::before{
                     width: 116px;
@@ -169,7 +169,7 @@
                     width: 45px;
                     height: 45px;
                 }
-                @include mixin.for-laptop{
+                @include mixin.for-laptop-lg{
                     width: fit-content;
                     height: 25px;
                 }
@@ -186,13 +186,13 @@
                 @include mixin.for-tablete{
                     display: none;
                 }
-                @include mixin.for-laptop{
+                @include mixin.for-laptop-lg{
                     display: flex;
                 }
             }
 
             &:hover{
-                @include mixin.for-laptop{
+                @include mixin.for-laptop-lg{
                     width: fit-content;
                 }
                 a{
@@ -212,7 +212,7 @@
                     @include mixin.for-tablete{
                         display: none;
                     }
-                    @include mixin.for-laptop{
+                    @include mixin.for-laptop-lg{
                         display: flex;
                     }
                 }
@@ -223,8 +223,19 @@
         }
 
         .go-to-top{
+            display: none;
             position: fixed;
-            bottom: -500%;
-            right: 2%;
+            @include mixin.for-phone{
+                bottom: 60px;
+                right: 2%;
+            }
+            @include mixin.for-laptop{
+                bottom: 60px;
+                right: 2%;
+            }
+            @include mixin.for-laptop-lg{
+                bottom: -500%;
+                right: 2%;
+            }
         }
     }

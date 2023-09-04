@@ -1,9 +1,10 @@
-import {React, Suspense, useEffect, useRef, useState} from "react";
+import {React, useEffect, useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
 import { Button } from "../../constants/pages";
 
 import "./contact.scss";
-import axios from "axios";
+import fetchData from "../../constants/fetchData";
 export const Contact = ({SocialMedia}) => {
   const [Information, setInformation] = useState([])
   const [name, setname] = useState("");
@@ -12,15 +13,9 @@ export const Contact = ({SocialMedia}) => {
   const [errors, seterrors] = useState({})
 
   useEffect(() => {
-    async function fetch(){
-      await axios.get('/src/constants/data.json')
-      .then((res)=> {
-        setInformation(res.data.Information)
-      })
-    }
-    fetch()
+    fetchData().then((res)=> setInformation(res.data.Information))
   }, [])
-
+  
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -45,13 +40,40 @@ export const Contact = ({SocialMedia}) => {
       emailjs.sendForm('service_pb9dh92', 'template_rqqhe92', form.current, '0rGElvJZ7SrDltwk9')
       .then((result) => {
           console.log(result.text);
+            toast.success('Message send succesfuly', {
+              style: {
+                border: '1px solid rgb(255, 180, 0)',
+                padding: '16px',
+                color: '#ffffff',
+                background : 'rgb(24, 24, 24)',
+                borderRadius : '20px'
+              },
+              iconTheme: {
+                primary: 'rgb(255, 180, 0)',
+                secondary: 'rgb(24, 24, 24)',
+              },
+            });
       }, (error) => {
-          console.log(error.text);
+          console.log(error);
+          toast.error("Message not sended", {
+            style: {
+              border: '1px solid rgb(255, 180, 0)',
+              padding: '16px',
+              color: '#ffffff',
+              background : 'rgb(24, 24, 24)',
+              borderRadius : '20px'
+            },
+            iconTheme: {
+              primary: 'rgb(255, 180, 0)',
+              secondary: 'rgb(24, 24, 24)',
+            },
+          });
       });
     }
   };
   return (
     <section id="Contact" className="pt-5 pb-3">
+      <Toaster />
       <div className="container container-sm container-lg container-xl container-xxl">
         <main className="d-flex flex-column justify-content-md-center align-items-center">
           <h1 className="col-12 text-center">Contact ME</h1>
@@ -60,7 +82,7 @@ export const Contact = ({SocialMedia}) => {
             <div className="information d-flex flex-column row justify-content-between col-12 col-lg-5">
 
               {Information?.map((item, index) => (
-                <div className="col-12 mb-4">
+                <div key={index} className="col-12 mb-4">
 
                   <div className="info-box d-flex">
 
@@ -79,8 +101,8 @@ export const Contact = ({SocialMedia}) => {
               ))}
 
               <div className="comptes col-12 d-flex d-xl-none justify-content-center justify-content-lg-start">
-                {SocialMedia?.map((item) => (
-                  <div className="compte">
+                {SocialMedia?.map((item, index) => (
+                  <div key={index} className="compte">
                     <a href={item.lien}>
                       <i className={`fa-brands ${item.icon}`}></i>
                     </a>

@@ -7,7 +7,6 @@ export { Contact } from "../pages/contact/Contact";
 export { Home } from "../pages/home/Home";
 
 export { Navbar } from "../components/navbar/Navbar";
-export { SocialMedia } from "../components/solcialMedia/SocialMedia";
 export { Button } from "../components/button/Button";
 
 
