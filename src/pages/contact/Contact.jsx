@@ -40,7 +40,7 @@ export const Contact = ({SocialMedia}) => {
       emailjs.sendForm('service_pb9dh92', 'template_rqqhe92', form.current, '0rGElvJZ7SrDltwk9')
       .then((result) => {
           console.log(result.text);
-            toast.success('Message send succesfuly', {
+          toast.success('Message send succesfuly', {
               style: {
                 border: '1px solid rgb(255, 180, 0)',
                 padding: '16px',
@@ -52,7 +52,11 @@ export const Contact = ({SocialMedia}) => {
                 primary: 'rgb(255, 180, 0)',
                 secondary: 'rgb(24, 24, 24)',
               },
-            });
+          });
+          setname('')
+          setemail('')
+          setmessage('')
+          seterrors({})
       }, (error) => {
           console.log(error);
           toast.error("Message not sended", {
