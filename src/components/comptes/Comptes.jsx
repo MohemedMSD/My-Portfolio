@@ -5,7 +5,7 @@ export const Comptes = ({SocialMedia}) => {
     <div className="side_comptes d-none d-xl-flex flex-column">
         {SocialMedia?.map((item, index) => (
           <div key={index} className="compte d-flex justify-content-center align-items-center">
-            <a href={item.lien}>
+            <a target="_blank" href={item.lien}>
               <i className={`fa-brands ${item.icon}`}></i>
             </a>
           </div>

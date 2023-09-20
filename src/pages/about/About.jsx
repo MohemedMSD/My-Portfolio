@@ -29,7 +29,8 @@ export const About = () => {
 
   const hundelClick = () =>{
     let a = document.createElement("a");
-    a.setAttribute('href', "https://drive.google.com/u/0/uc?id=1betqYes7_roMD_qCVpRBXI6TjdDVpPUW&export=download");
+    a.setAttribute('href', "https://drive.google.com/file/d/1betqYes7_roMD_qCVpRBXI6TjdDVpPUW/view?usp=drive_link");
+    a.setAttribute("target", "_blank")
     a.click();
   }
   return (
