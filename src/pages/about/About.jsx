@@ -28,7 +28,9 @@ export const About = () => {
   }
 
   const hundelClick = () =>{
-    alert('CV is Not ready')
+    let a = document.createElement("a");
+    a.setAttribute('href', "https://drive.google.com/u/0/uc?id=1betqYes7_roMD_qCVpRBXI6TjdDVpPUW&export=download");
+    a.click();
   }
   return (
     <section id="About" className="py-5">

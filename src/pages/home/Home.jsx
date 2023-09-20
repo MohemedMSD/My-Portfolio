@@ -12,10 +12,12 @@ export const Home = () => {
   return (
     <section id="Home">
       <span />
-      <div className="container container-sm container-md container-lg container-xl container-xxl">
+      <div className="container container-sm container-md container-lg container-xl">
         <div className="main row d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
           <div className="div_image col-12  col-lg-5 d-flex justify-content-center justify-content-lg-start align-items-center">
-            <div className="image"></div>
+            <div className="image">
+              <img src="https://i.ibb.co/RQ2wvDZ/profil.png" alt="Profil"/>
+            </div>
           </div>
           <div className="div_info col-12 col-lg-7 d-flex flex-column justify-content-center">
             <h1>
