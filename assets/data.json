@@ -3,8 +3,6 @@
     "InformationPersonnal" : [
         {"key" : "First name", "value" : "Mohamed"},
         {"key" : "Last name", "value" : "MESSOUD"},
-        {"key" : "Age", "value" : "21 years old"},
-        {"key" : "Adress", "value" : "Chefchaouen"},
         {"key" : "Nationality", "value" : "Maroc"},
         {"key" : "phone", "value" : "+212651549681"},
         {"key" : "email", "value" : "msdmohame20@gmail.com"},
