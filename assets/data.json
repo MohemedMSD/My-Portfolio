@@ -37,12 +37,20 @@
     ],
     "projects" : [
         {
+            "name" : "Gite Dar Rihana", 
+            "links" : {
+                "github" : "",
+                "livePreview" : "http://gite-rihanna.great-site.net"
+            },
+            "image" : "https://i.ibb.co/F7D6v1m/rihana.png"
+        },
+        {
             "name" : "Music Player", 
             "links" : {
                 "github" : "https://github.com/MohemedMSD/React-Music-Player",
                 "livePreview" : "https://mohemedmsd.github.io/React-Music-Player/"
             },
-            "image" : "https://i.ibb.co/NFy0Jp3/music-player.jpg"
+            "image" : "https://i.ibb.co/cQsHgZp/music-player.jpg"
         },
         {
             "name" : "Weather App", 
