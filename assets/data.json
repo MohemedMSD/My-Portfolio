@@ -37,6 +37,14 @@
     ],
     "projects" : [
         {
+            "name" : "B2B Maroc", 
+            "links" : {
+                "github" : "",
+                "livePreview" : "https://www.b2bmaroc.com"
+            },
+            "image" : "https://i.ibb.co/8n3kW1L5/B2Bmaroc.png"
+        },
+        {
             "name" : "Gite Dar Rihana", 
             "links" : {
                 "github" : "",
