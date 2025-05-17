@@ -45,6 +45,14 @@
             "image" : "https://i.ibb.co/8n3kW1L5/B2Bmaroc.png"
         },
         {
+            "name" : "MSD SHOP", 
+            "links" : {
+                "github" : "",
+                "livePreview" : "https://msd-shop.free.nf"
+            },
+            "image" : "https://i.ibb.co/qS3xGf3/msd.png"
+        },
+        {
             "name" : "Gite Dar Rihana", 
             "links" : {
                 "github" : "",
