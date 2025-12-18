@@ -39,7 +39,6 @@
         {
             "name" : "B2B Maroc", 
             "links" : {
-                "github" : "",
                 "livePreview" : "https://www.b2bmaroc.com"
             },
             "image" : "https://i.ibb.co/8n3kW1L5/B2Bmaroc.png"
@@ -47,16 +46,13 @@
         {
             "name" : "MSD SHOP", 
             "links" : {
-                "github" : "",
-                "livePreview" : "https://msd-shop.free.nf"
+                "livePreview" : "https://msdshop.netlify.app/"
             },
             "image" : "https://i.ibb.co/qS3xGf3/msd.png"
         },
         {
             "name" : "Gite Dar Rihana", 
             "links" : {
-                "github" : "",
-                "livePreview" : "http://gite-rihanna.great-site.net"
             },
             "image" : "https://i.ibb.co/F7D6v1m/rihana.png"
         },
